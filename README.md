@@ -54,3 +54,16 @@ python "Traffic-Signal-Violation-Detection-main/Traffic Signal Violation Detecti
 - Red light detection is a simple brightness threshold (mean gray value > 128) and does not identify colour; it can misfire under different lighting.
 - `tv.mp4` is included but not referenced by the script.
 - Model and video files are included in the folder (`yolov8m.pt`, `tr.mp4`, `tv.mp4`).
+
+## Pretrained YOLO weights (not included)
+
+The following off-the-shelf Ultralytics checkpoints were removed from this repository because they are publicly downloadable. The code loads them by name, and Ultralytics downloads them automatically on first use:
+
+- `yolov8m.pt`
+
+```python
+from ultralytics import YOLO
+model = YOLO("yolov8n.pt")  # downloaded automatically if not present
+```
+
+Or download them manually from https://github.com/ultralytics/assets/releases
